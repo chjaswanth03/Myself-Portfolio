@@ -13,7 +13,7 @@ const Soundtrack = ({ audioRef }) => {
   const [isMuted, setIsMuted] = React.useState(false);
 
 
-  const audioSrc = ""; 
+  const audioSrc = "YOUR_MP3_LINK_FOR_SADHINCHANE_O_MANASA.mp3"; 
   const trackTitle = "Sadhinchane O Manasa - Tyagaraja";
 
 
