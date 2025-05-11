@@ -1,0 +1,66 @@
+
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/nunito/400.css";
+@import "@fontsource/nunito/600.css";
+@import "@fontsource/nunito/700.css";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+     @apply scroll-smooth;
+  }
+  body {
+    @apply bg-cream text-warm-grey;
+    font-family: var(--font-nunito);
+    @apply text-base leading-relaxed; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-subtle-noise; 
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-soft-charcoal;
+    letter-spacing: -0.01em;
+    line-height: 1.4; 
+  }
+
+  a {
+     @apply text-soft-teal hover:text-teal-ink transition-colors duration-200;
+  }
+ 
+  .prose p, .prose li {
+    @apply leading-loose; 
+  }
+   .prose blockquote {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .cursor-ink-quill:hover, .cursor-ink-quill *:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' style='font-size: 24px;'><text y='20'>🪶</text></svg>") 4 20, auto;
+  }
+
+  .cursor-ink-dot:hover, .cursor-ink-dot *:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><circle cx='10' cy='10' r='3' fill='hsl(var(--warm-grey))'/></svg>") 10 10, auto;
+  }
+
+  .interactive-link {
+    @apply cursor-ink-dot;
+  }
+}

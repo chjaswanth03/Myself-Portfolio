@@ -1,0 +1,27 @@
+
+@tailwind utilities;
+
+@layer utilities {
+  .cursor-ink-quill:hover, .cursor-ink-quill *:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28' style='font-size: 24px;'><text y='20'>🪶</text></svg>") 4 20, auto;
+  }
+
+  .cursor-ink-dot:hover, .cursor-ink-dot *:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><circle cx='10' cy='10' r='3' fill='hsl(var(--warm-grey))'/></svg>") 10 10, auto;
+  }
+
+  .interactive-link {
+    @apply cursor-ink-dot;
+  }
+
+  .parallax-bg { /* Basic parallax placeholder */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .text-shadow-subtitle {
+    text-shadow: 1px 1px 3px hsla(var(--subtle-grey) / 0.4);
+  }
+}

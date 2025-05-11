@@ -1,0 +1,82 @@
+
+@tailwind base;
+
+@layer base {
+  :root {
+    --background: 40 60% 97%; /* Cream */
+    --foreground: 30 10% 25%; /* Warm Grey */
+    
+    --card: 40 50% 95%; /* Lighter Cream / Off-white for cards */
+    --card-foreground: 30 10% 25%; /* Warm Grey */
+    
+    --popover: 40 60% 97%; /* Cream */
+    --popover-foreground: 30 10% 25%; /* Warm Grey */
+    
+    --primary: 180 35% 45%; /* Soft Teal */
+    --primary-foreground: 40 60% 98%; /* Cream for text on primary */
+    
+    --secondary: 40 40% 90%; /* Lighter Sand for secondary backgrounds */
+    --secondary-foreground: 30 10% 25%; /* Warm Grey */
+    
+    --muted: 40 30% 88%; /* Muted Sand */
+    --muted-foreground: 30 10% 45%; /* Lighter Warm Grey for muted text */
+    
+    --accent: 180 35% 50%; /* Soft Teal - can be same as primary or slightly different */
+    --accent-foreground: 40 60% 98%; /* Cream */
+    
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 60% 98%;
+    
+    --border: 40 30% 85%; /* Softer border */
+    --input: 40 30% 92%;
+    --ring: 180 35% 50%; /* Soft Teal for focus ring */
+    
+    --radius: 0.5rem; 
+
+    /* Custom Theme Colors */
+    --cream: 40 60% 97%;
+    --off-white: 40 50% 95%;
+    --soft-teal: 180 35% 45%;
+    --warm-grey: 30 10% 25%;
+    --sand: 40 30% 92%; 
+    --ivory: 35 50% 98%; 
+    --teal-ink: 180 45% 45%; 
+    --soft-charcoal: 210 10% 23%; 
+    --dark-grey: 30 10% 15%; /* Darker Warm Grey for #222222 */
+
+
+    --font-inter: 'Inter', sans-serif;
+    --font-nunito: 'Nunito', sans-serif;
+    --font-playfair-display: 'Playfair Display', serif;
+    --font-signature: 'Dancing Script', cursive;
+    --font-telugu: 'Noto Sans Telugu', sans-serif;
+  }
+
+  .dark {
+    /* Dark mode can be designed later if needed, adjust these to match warm/muted dark theme */
+    --background: 30 10% 15%; 
+    --foreground: 40 50% 90%; 
+    --card: 30 10% 20%;
+    --card-foreground: 40 50% 90%;
+    --popover: 30 10% 15%;
+    --popover-foreground: 40 50% 90%;
+    --primary: 180 30% 60%; 
+    --primary-foreground: 30 10% 10%;
+    --secondary: 30 10% 25%;
+    --secondary-foreground: 40 50% 90%;
+    --muted: 30 10% 25%;
+    --muted-foreground: 40 30% 70%;
+    --accent: 180 30% 60%; 
+    --accent-foreground: 30 10% 10%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 40 50% 90%;
+    --border: 30 10% 30%;
+    --input: 30 10% 30%;
+    --ring: 180 30% 60%;
+    --cream: 40 15% 20%;
+    --off-white: 40 20% 80%;
+    --soft-teal: 180 30% 60%;
+    --warm-grey: 40 20% 75%;
+    --dark-grey: 40 50% 85%;
+  }
+}

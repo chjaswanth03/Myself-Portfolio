@@ -1,0 +1,130 @@
+
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/500.css";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/nunito/400.css";
+@import "@fontsource/nunito/600.css";
+@import "@fontsource/nunito/700.css";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap'); /* Example for classic serif */
+
+
+@tailwind base;
+
+@layer base {
+  :root {
+    /* New Color Palette */
+    --warm-off-white: 35 30% 96%; /* Warm Off-White (Base Background) */
+    --deep-green: 150 30% 30%; /* Deep Green (Accent, Darker Elements) */
+    --subtle-grey: 210 10% 65%; /* Subtle Grey (Text, Borders) */
+    --emotional-teal: 180 35% 45%; /* Emotional Teal (Primary Accent, Links) - Replaces soft-teal */
+    
+    --background: var(--warm-off-white);
+    --foreground: hsl(var(--deep-green)); /* Main text on warm-off-white */
+    
+    --card: 35 30% 98%; /* Slightly lighter than warm-off-white for cards */
+    --card-foreground: hsl(var(--deep-green));
+    
+    --popover: hsl(var(--warm-off-white));
+    --popover-foreground: hsl(var(--deep-green));
+    
+    --primary: var(--emotional-teal);
+    --primary-foreground: 35 30% 98%; /* Light text on teal */
+    
+    --secondary: 150 20% 88%; /* Lighter shade of deep green or a muted grey */
+    --secondary-foreground: hsl(var(--deep-green));
+    
+    --muted: hsl(var(--subtle-grey) / 0.7); /* Muted text */
+    --muted-foreground: hsl(var(--subtle-grey)); 
+    
+    --accent: var(--emotional-teal);
+    --accent-foreground: 35 30% 98%;
+    
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 35 30% 98%;
+    
+    --border: hsl(var(--subtle-grey) / 0.3); 
+    --input: 35 30% 92%;
+    --ring: var(--emotional-teal);
+    
+    --radius: 0.65rem; /* Slightly softer corners */
+
+    /* Compatibility Colors (can be phased out or mapped) */
+    --cream: 40 60% 97%; /* Map to warm-off-white or a variant */
+    --off-white: 40 50% 95%; /* Map to warm-off-white or a variant */
+    --soft-teal: var(--emotional-teal); /* Mapped */
+    --warm-grey: hsl(var(--deep-green) / 0.8); /* Main text color, slightly lighter deep green */
+    --sand: 40 30% 92%; 
+    --ivory: 35 50% 98%; 
+    --teal-ink: 180 40% 35%; /* Darker teal for specific highlights */
+    --soft-charcoal: 150 25% 20%; /* Darker variant of deep green for headings */
+    --dark-grey: 150 20% 15%;
+
+
+    --font-inter: 'Inter', sans-serif;
+    --font-nunito: 'Nunito', sans-serif;
+    --font-playfair-display: 'Playfair Display', serif; /* Main heading */
+    --font-georgia: 'Georgia', serif; /* Classic serif for specific titles */
+    --font-signature: 'Dancing Script', cursive; /* Handwritten notes */
+    --font-telugu: 'Noto Sans Telugu', sans-serif;
+  }
+
+  .dark {
+    /* Adjust dark mode to new palette if needed */
+    --warm-off-white: 150 10% 15%;
+    --deep-green: 150 40% 70%;
+    --subtle-grey: 210 10% 40%;
+    --emotional-teal: 180 40% 60%;
+
+    --background: var(--warm-off-white);
+    --foreground: hsl(var(--deep-green));
+    --card: 150 10% 20%;
+    --card-foreground: hsl(var(--deep-green));
+    /* ... other dark mode variables ... */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+     @apply scroll-smooth;
+  }
+  body {
+    @apply bg-warm-off-white text-warm-grey; 
+    font-family: var(--font-nunito);
+    @apply text-base leading-relaxed; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-subtle-noise; 
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-soft-charcoal; 
+    letter-spacing: -0.01em;
+    line-height: 1.4; 
+  }
+  h1 { @apply font-bold; } /* Ensure h1 is bold */
+  .classic-serif-title {
+    @apply font-heading-alt; /* Use Georgia or similar for specific titles */
+  }
+
+
+  a {
+     @apply text-emotional-teal hover:text-teal-ink transition-colors duration-200;
+  }
+  
+  .prose p, .prose li {
+    @apply leading-loose; 
+  }
+   .prose blockquote {
+    @apply leading-relaxed;
+  }
+}
